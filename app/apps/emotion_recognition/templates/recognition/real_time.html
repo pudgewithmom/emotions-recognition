@@ -1,0 +1,33 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_tags humanize %}
+
+{% block content %}
+
+<div class="container d-flex flex-wrap flex-column justify-content-center align-content-center">
+<!-- 
+    <form action="" method="POST" class='col-4'enctype="multipart/form-data">
+        {% csrf_token %}
+            <button type="submit" class="btn btn-primary mt-3">Включить камеру</button>
+    </form> -->
+
+    <a class="btn btn-primary w-75 " data-bs-toggle="collapse" href="#collapseCamera" role="button" aria-expanded="false" aria-controls="collapseCamera">
+        Включить/Выключить камеру
+      </a>
+
+    <div class="collapse mt-3" id="collapseCamera">
+        <div class="card card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8  offset-lg-2">
+                        <img src="{% url 'recognition:real_time_video_stream' %}" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+</div>
+
+{%endblock%}

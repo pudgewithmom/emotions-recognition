@@ -1,0 +1,18 @@
+# Игнорировать все файлы внутри папки media, но не саму папку
+.media/*
+
+# Игнорировать файл базы данных SQLite
+.db.sqlite3
+
+# Другие стандартные игнорируемые файлы для Django
+*.pyc
+__pycache__/
+*.sqlite3
+*.log
+.env
+.venv/
+venv/
+env/
+.DS_Store
+.idea/
+.vscode/
